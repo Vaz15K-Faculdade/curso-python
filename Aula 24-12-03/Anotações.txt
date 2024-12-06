@@ -1,0 +1,23 @@
+# len() -> Retorna o tamanho da lista
+# max() -> Retorna o maior valor da lista
+# min() -> Retorna o menor valor da lista
+# sum() -> Retorna a soma dos valores da lista
+
+# in -> Verifica se um item está na lista
+# not in -> Verifica se um item não está na lista
+
+# Para mexer com lista:
+# lista.append() -> Adiciona um item no final da lista
+# lista.insert() -> Adiciona um item em uma posição específica
+# lista.extend() -> Adiciona uma lista em outra lista
+
+# lista.remove() -> Remove um item específico da lista
+# lista.pop() -> Remove o último item da lista
+# lista.clear() -> Limpa a lista
+
+# lista.index() -> Retorna o índice de um item específico
+# lista.count() -> Retorna a quantidade de um item específico
+
+# lista.sort() -> Ordena a lista
+# lista.reverse() -> Inverte a lista
+# lista.copy() -> Copia a lista
