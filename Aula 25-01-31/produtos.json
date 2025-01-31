@@ -1,0 +1,74 @@
+{
+    "100" : {
+        "nome": "Agua sem gas 500ml",
+        "preco": 1.50
+    },
+    "101" : {
+        "nome": "Coca-Cola 2L",
+        "preco": 9.50
+    },
+    "102" : {
+        "nome": "Coca-Cola 500ml",
+        "preco": 5.50
+    },
+    "103" : {
+        "nome": "Cerveja Stella LN",
+        "preco": 7.50
+    },
+    "104" : {
+        "nome": "Cerveja Itaipava Lata",
+        "preco": 3.50
+    },
+    "105" : {
+        "nome": "Refrigente Lata",
+        "preco": 4.50
+    },
+    "200" : {
+        "nome": "Pao Frances Kg",
+        "preco": 19.00
+    },
+    "201" : {
+        "nome": "Queijo Prato Kg",
+        "preco": 69.90
+    },
+    "202" : {
+        "nome": "Presuto Magro Kg",
+        "preco": 45.90
+    },
+    "203" : {
+        "nome": "Peito de Peru Kg",
+        "preco": 97.90
+    },
+    "204" : {
+        "nome": "Mortadela Defumada Kg",
+        "preco": 39.90
+    },
+    "205" : {
+        "nome": "Alface Crespa Un",
+        "preco": 7.50
+    },
+    "206" : {
+        "nome": "Tomate Kg",
+        "preco": 9.50
+    },
+    "207" : {
+        "nome": "Tomate Seco Kg",
+        "preco": 100.00
+    },
+    "208" : {
+        "nome": "Rucula Baby Un",
+        "preco": 11.30
+    },
+    "300" : {
+        "nome": "Chocolate Snickers",
+        "preco": 5.30
+    },
+    "301" : {
+        "nome": "Chocolate Hersheys 80g",
+        "preco": 7.90
+    },
+    "302" : {
+        "nome": "Chocolate M&M 100g",
+        "preco": 19.90
+    }
+}
