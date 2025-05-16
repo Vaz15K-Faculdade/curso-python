@@ -39,41 +39,19 @@ class Registro():
 
         self.professores.append(Professor(nome, cpf, graduacao, Materia))
 
+    @staticmethod
+    def listar(lista):
+        for obj in lista:
+            obj.detalhes()
 
-registro = Registro()
-while True:
-    print("1 - Registrar Pessoa")
-    print("2 - Registrar Estudante")
-    print("3 - Registrar Professor")
-    print("4 - Registrar Monitor")
-    print("5 - Listar tudo")
-    print("6 - Sair")
-    opcao = input("Escolha uma opção: ")
+    def listar_pessoas(self):
+        Registro.listar(self.pessoas)
 
-    if opcao == "1":
-        registro.registrar_pessoa()
-    elif opcao == "2":
-        registro.registar_estudante()
-    elif opcao == "3":
-        registro.registar_professores()
-    elif opcao == "4":
-        registro.registar_monitor()
-    elif opcao == "5":
-        print("Pessoas:")
-        for pessoa in registro.pessoas:
-            pessoa.detalhes()
-            print()
-        print("Estudantes:")
-        for estudante in registro.estudantes:
-            estudante.detalhes()
-            print()
-        print("Professores:")
-        for professor in registro.professores:
-            professor.detalhes()
-            print()
-        print("Monitores:")
-        for monitor in registro.monitores:
-            monitor.detalhes()
-            print()
-    elif opcao == "6":
-        break
+    def listar_estudantes(self):
+        Registro.listar(self.estudantes)
+
+    def listar_professores(self):
+        Registro.listar(self.professores)
+
+    def listar_monitores(self):
+        Registro.listar(self.monitores)

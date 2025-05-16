@@ -66,11 +66,3 @@ class Monitor(Estudante):
 # do super para mostrar os atributos herdados
 # opção 1: super().detalhes()
 # opção 2: Pessoa.detalhes(self)
-
-arthur = Monitor("Arthur", "123456789", "ADS", 2, "Python", 1000)
-arthur.detalhes()
-
-print()
-
-Rodrigo = Professor("Rodrigo", "987654321", "Engenharia", "Matematica")
-Rodrigo.detalhes()
