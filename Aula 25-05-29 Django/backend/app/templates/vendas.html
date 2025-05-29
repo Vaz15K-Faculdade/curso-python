@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+Vendas - PDV Django
+{% endblock %}
+
+{% block header %}
+Vendas
+{% endblock %}
+
+{% block conteudo %}
+<table class="min-w-full bg-gray-800 shadow-md rounded-lg overflow-hidden">
+    <thead class="bg-gray-700 text-gray-200 text-left">
+        <tr>
+            <th class="py-3 px-6">Horário</th>
+            <th class="py-3 px-6">Forma Pagamento</th>
+            <th class="py-3 px-6">Total</th>
+            <th class="py-3 px-6">Produtos</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for venda in vendas %}
+        <tr class="border-b border-gray-700 hover:bg-gray-700">
+            <td class="py-4 px-6">{{ venda.horario }}</td>
+            <td class="py-4 px-6">{{ venda.formaDePagamento }}</td>
+            <td class="py-4 px-6">R$ {{ venda.total }}</td>
+            <td class="py-4 px-6">
+                <table class="min-w-full bg-gray-800 shadow-md rounded-lg overflow-hidden">
+                    <thead class="bg-gray-700 text-gray-200 text-left">
+                        <tr>
+                            <th class="py-3 px-6">Produto</th>
+                            <th class="py-3 px-6">Quantidade</th>
+                            <th class="py-3 px-6">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for pv in venda.produtos_vendidos.all %}
+                        <tr class="border-b border-gray-700 hover:bg-gray-700">
+                            <td class="py-4 px-6">{{ pv.produto.descricao }}</td>
+                            <td class="py-4 px-6">{{ pv.quantidade }}</td>
+                            <td class="py-4 px-6">R$ {{ pv.total }}</td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="4" class="py-4 px-6 text-center text-gray-400">Nenhum produto vendido.</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="4" class="py-4 px-6 text-center text-gray-400">Nenhuma venda cadastrada.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
+</body>
+
+</html>

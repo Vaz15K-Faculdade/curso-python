@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block titulo %}PDV Django{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-6 text-center">{% block header %}PDV Django{% endblock %}</h1>
+
+        <div class="overflow-x-auto">
+            <a href="/" class="button min-w-full bg-gray-800 shadow-md rounded-lg overflow-hidden">Voltar</a>
+
+            {% block conteudo %}
+            {% endblock %}
+
+        </div>
+    </div>
+
+
+</body>
+</html>

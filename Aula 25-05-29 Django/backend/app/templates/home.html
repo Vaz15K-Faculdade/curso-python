@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+PDV Django
+{% endblock %}
+
+{% block header %}
+PDV Django 
+{% endblock %}
+
+{% block conteudo %}
+<table class="min-w-full bg-gray-800 shadow-md rounded-lg overflow-hidden">
+    <thead class="bg-gray-700 text-gray-200 text-left">
+        <tr>
+            <!-- <th class="py-3 px-6">Descrição</th> -->
+        </tr>
+    </thead>
+    <tbody>
+        {% for pagina in paginas %}
+            <tr class="border-b border-gray-700 hover:bg-gray-700">
+                <td class="py-4 px-6"><a href="{{ pagina.url }}">{{ pagina.nome }}</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
+</body>
+</html>

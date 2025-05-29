@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+Lista de Produtos - PDV Django
+{% endblock %}
+
+{% block header %}
+Lista de Produtos 
+{% endblock %}
+
+{% block conteudo %}
+<table class="min-w-full bg-gray-800 shadow-md rounded-lg overflow-hidden">
+    <thead class="bg-gray-700 text-gray-200 text-left">
+        <tr>
+            <th class="py-3 px-6">Descrição</th>
+            <th class="py-3 px-6">Valor</th>
+            <th class="py-3 px-6">Custo</th>
+            <th class="py-3 px-6">Categoria</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for produto in produtos %}
+            <tr class="border-b border-gray-700 hover:bg-gray-700">
+                <td class="py-4 px-6">{{ produto.descricao }}</td>
+                <td class="py-4 px-6">{{ produto.categoria }}</td>
+                <td class="py-4 px-6">R$ {{ produto.valor }}</td>
+                <td class="py-4 px-6">R$ {{ produto.custo }}</td>
+            </tr>
+        {% empty %}
+            <tr>
+                <td colspan="4" class="py-4 px-6 text-center text-gray-400">Nenhum produto cadastrado.</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
+</body>
+</html>
