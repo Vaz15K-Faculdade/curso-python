@@ -1,0 +1,53 @@
+Cargos:
+	Admin ( Responsável geral, gerencia operadores e configurações sensíveis)
+	Operador (Consegue cadastrar, editar e excluir eventos. Acompanhar relatório do evento (numero de inscritos e vagas sobrando))
+	Usuário (Consegue apenas se inscrever em eventos e obter informações do mesmo)
+
+Gerenciamento de Pessoas:
+	Cadastrar Pessoa: "Nome, CPF, E-mail, Endereço, Data de Nascimento, Telefone"
+	Alterar Cadastro
+	Excluir Cadastro
+
+Área Usuário:
+	Login e Criação de Usuários
+	Editar Informações (Endereço, Numero telefone, Senha)
+	Excluir conta
+	Eventos Inscritos
+	Eventos Anteriores
+	Notificações de Eventos (email / SMS)
+
+Área Administrador
+	Cadastro de Novos (Admins)
+	Cadastro de Eventos
+	Edição de Eventos
+	Exclusão de Eventos
+	Exportar Relatório do Evento
+
+Area Eventos:
+	Nome do Evento:
+	Descrição do Evento
+	Data do Evento (Hora de inicio)
+	Duração do evento (Estimada ou real)
+	Quantidade de Vagas
+	Localização do Evento (Link para o GMaps)
+	Gerar Ingresso único
+	
+
+Ferramentas:
+	FastAPI (Pensar no FastAPI-Users)
+	SQLite
+	2 front (pyside para o totem, Web para cadastro) (Mudar web???)
+	
+	qrcode: Geração fácil de QR Codes em Python.
+	reportlab: Para gerar PDFs de comprovantes.
+
+
+Banco de Dados:
+	usuarios:
+			id_usuario(pk), nome, cpf (unique), email (unique), telefone, endereço, permissao
+	user-login:
+			username(pk), senha (criptografia), id_usuario(fk)
+	evento:
+			id_evento(pk), nome_evento, desc_evento, dta_evento, hor_ini_evento, dur_evento, vag_evento, vag_disp_evento, loc_evento
+	ingresso:
+			id_ingresso(pk), num_ingresso, id_usuario(fk), id_evento(fk)

@@ -1,0 +1,11 @@
+# Python
+.venv
+*.pyc
+__pycache__/
+
+#  Banco de dados
+users.db
+events.db
+
+# Ambiente virtual
+.env

@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+fastapi-users[sqlalchemy]
+sqlalchemy
+python-multipart
+python-dotenv
+PySide6
+requests
+qasync
+qrcode[pil]
+validate-docbr
